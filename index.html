@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Analytics Validation Script</title>
+      <link rel="shortcut icon" href="https://www.turner.com/sites/all/themes/turner_themes/turner_broadcasting/favicon.ico" type="image/vnd.microsoft.icon">
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/validate.css" rel="stylesheet">
+   </head>
+   <body id="page-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+         <a class="navbar-brand js-scroll-trigger" href="#page-top">
+         <span class="d-block d-lg-none">Analytics Validation Script</span>
+         <span class="d-none d-lg-block">
+         <img class="img-fluid img-profile mx-auto mb-2" src="img/turner.png" alt="">
+         </span>
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="helpbox">
+            <section class="help_section">
+               <h3>Help</h3>
+               <div class="accordion" id="accordionExample">
+                  <div class="card">
+                     <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Bootstrap Validation
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                           <span class="code_syntax"><strong>Syntax:</strong> https://nexus.ensighten.com/turnerintl/cnemea-prod/Bootstrap.js</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Domain Validation
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                           <span class="code_syntax"> Domain must be www.turner.com </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Brand Validation
+                           </button>
+                        </h5>
+                     </div>
+                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                           <span class="code_syntax"><strong>Syntax:</strong> If the URL is www.turner.com, then brand will be "turner".</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <span class="turner_url"><a href="https://www.turner.com">www.turner.com</a></span>
+      </nav>
+      <div class="container-fluid p-0">
+         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+            <div class="w-100">
+               <h1 class="mb-0">Analytics
+                  <span class="text-primary">Validation</span> Script
+               </h1>
+            </div>
+         </section>
+         <section class="input-fields">
+            <form class="credentials-box p-lg-5">
+			<span class="note">Note:- After filling input fields click anywhere on the page to validate inputs</span>
+               <div class="form-group bootstrap_data">
+                  <label for="bootstrap_input">Enter Bootstrap Path</label>
+                  <input type="text" class="form-control" id="bootstrap_input"  placeholder="Enter path here"  required>
+                  <div class="alert alert-danger alert-dismissible fade show">
+                     <strong>Warning!</strong> The Bootstrap path entered by you is not matching with regex, please enter correct Bootstrap path. For Example: https://nexus.ensighten.com/turnerintl/cnemea-prod/Bootstrap.js"
+                  </div>
+                  <div class="alert alert-success alert-dismissible fade show">
+                     <span class="correct-sign"></span><strong>Path is valid</strong> 
+                  </div>
+                  <div class="alert alert-warning alert-dismissible fade show">
+                     <strong>Warning!</strong> Enter Bootstrap path
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label for="brand_input">Enter Brand Name</label>
+                  <div class="brand_credentials d-flex align-items-center d-justify-sp-betw">
+                     <div class= select-wrap>
+                        <select id="brand_input" class="form-control" disabled></select>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label for="domain_input">Enter Domain Name</label>
+                  <div class="domain_credentials d-flex align-items-center d-justify-sp-betw">
+                     <div class= select-wrap>
+                        <select id="domain_input" class="form-control" disabled></select>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label for="account_input">Enter RSID Account</label>
+                  <div class="account_credentials ">
+                     <input type="text" class="form-control small-input" id="account_input" placeholder="Enter RSID account(s)" disabled required>
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label for="space_input">Enter Space Name</label>
+                  <div class="space_credentials ">
+                     <input type="text" class="form-control small-input" id="space_input" placeholder="Enter Space Name" disabled required>
+                  </div>
+               </div>
+               <button class="btn btn-primary code-submit" type="button" disabled onclick="showInput();" >Generate Script</button>
+            </form>
+         </section>
+         <div class= "p-lg-5">
+            <form class = "code-block" action="https://closure-compiler.appspot.com/compile" method="POST">
+               <p class="generated_heading">Console</p>
+               <textarea id= "updatedcode" name="js_code" cols="50" rows="15">
+    
+               </textarea>
+               <input type="hidden" name="compilation_level" value="WHITESPACE_ONLY">
+               <input type="hidden" name="output_format" value="text">
+               <input type="hidden" name="output_info" value="compiled_code">
+               <br><br>
+               <input class="btn btn-primary btn-minify btn-hide" type="submit"  value="minify">
+            </form>
+         </div>
+      </div>
+      <div class="sample_code1">
+         <p class="first_code_block">
+            (function validate_implementation() {  
+            var regExp = '^(http:|https:)?(\/\/)(tdi|nexus-test|nexus|agility)\.(ensighten|tbs|cartoonnetwork|\w+)\.(com)\/(turner|turnerintl|turneremea)?\/[a-zA-Z-0-9-_]+\/((B|b)ootstrap)\.(js)';
+            var spacesCollection = {
+         </p>
+         <p class="second_code_block">		 
+            var rsidCollection = {
+         </p>
+         <p class="third_code_block">
+            var urlRegex = new RegExp(regExp); 
+            var scripts = document.getElementsByTagName('script');
+            var rval = {};
+            var get_location_Bootstrap;
+            var get_location_Metadata;
+            if (typeof window.turner_metadata !== 'undefined' && typeof window.turner_metadata.trackAction !== 'undefined') {
+            console.log('[PASS] Correct turner_metadata');
+            } else {
+            console.log('[FAIL] Turner_metadata does not contain trackAction array');
+            }
+            if (typeof scripts !== 'undefined' && scripts.length > 1) {
+            var position_Bootstrap = [];
+            for (var i = 0; i < scripts.length; i++) {
+            if (urlRegex.test(scripts[i].src)) {
+            position_Bootstrap.push(i);
+            get_location_Bootstrap = i;
+            }
+            }
+            rval.position_Bootstrap = position_Bootstrap;
+            }
+            /*Checking script with turner_metadata*/
+            if (typeof window.turner_metadata !== 'undefined') {
+            var position_Metadata = [];
+            for (var i = 0; i < scripts.length; i++) {
+            var temp = scripts[i].text;
+            if (temp != "" && (temp.indexOf('var turner_metadata') > -1 || temp.indexOf('window.turner_metadata') > -1)) {
+            position_Metadata.push(i);
+            get_location_Metadata = i;
+            break;
+            }
+            }
+            rval.position_Metadata = position_Metadata;
+            }
+            /*Comparing indexes of scripts which have bootstrap.js and turner_metadata*/
+            if (typeof get_location_Metadata == "undefined" && typeof get_location_Bootstrap == "undefined") {
+            console.log('[FAIL] Both Bootstrap & Turner_metadata are not available');
+            } else if (typeof get_location_Metadata !== "undefined" && typeof get_location_Bootstrap == "undefined") {
+            console.log('[FAIL] Bootstrap is not available and Turner_metadata is loading');
+            } else if (typeof get_location_Metadata == "undefined" && typeof get_location_Bootstrap !== "undefined") {
+            console.log('[FAIL] Bootstrap is loading and Turner_metadata is not available')
+            } else if (typeof get_location_Metadata !== "undefined" && typeof get_location_Bootstrap !== "undefined") {
+            if (get_location_Bootstrap > get_location_Metadata) {
+            console.log('[PASS] Turner_metadata object is loading before Bootstrap.js ');
+            } else {
+            console.log('[FAIL] Bootstrap.js is loading before turner_metadata object');
+            }
+            }
+            var currentUrl = window.location.hostname;
+            var getDomain = currentUrl.split(".");
+            var spaceFlag = 0;
+            for (var fetchSpace in spacesCollection) {
+            if (fetchSpace === getDomain[1] || getDomain[1].includes(fetchSpace)) {
+            for (var fetchBrand in spacesCollection[fetchSpace]) {
+            if (fetchBrand === currentUrl) {
+            spaceFlag = 1;
+            if (spacesCollection[fetchSpace][fetchBrand] !== "null") {
+            /*Checking source of Boostrap.js*/
+            if (typeof scripts !== 'undefined' && scripts.length > 1) {
+            for (var i = 0; i < scripts.length; i++) {
+            if (urlRegex.test(scripts[i].src)) {
+            var bsource = scripts[i].src;
+            var strAfterSplit = bsource.split("/");
+            if (spacesCollection[fetchSpace][fetchBrand] == strAfterSplit[strAfterSplit.length - 2]) {
+            console.log('[PASS] Loading correct Bootstrap.js');
+            } else {
+            console.log('[FAIL] Expected Bootstrap should be', spacesCollection[fetchSpace][fetchBrand], '/bootstrap.js');
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            
+            var domainFlag = 0;
+            for (var fetchrsidSpace in rsidCollection) {
+            if (fetchrsidSpace === getDomain[1] || getDomain[1].includes(fetchrsidSpace)) {
+            for (var fetchrsidBrand in rsidCollection[fetchrsidSpace]) {
+            if (fetchrsidBrand === currentUrl) {
+            domainFlag = 1;
+            if (rsidCollection[fetchrsidSpace][fetchrsidBrand] !== "null") {
+            var entries = [];
+            for (var i = 0; i < window.performance.getEntries().length; i++) {
+            var a = window.performance.getEntries()[i];
+            if (typeof a.name === 'string' && (a.name.indexOf('sc.omtrdc.net') > 0 || a.name.indexOf('sanalytics') > 0)) {
+            entries.push(a.name);
+            var splitName = a.name.split("/");
+            for (var j = 0; j < splitName.length; j++) {
+            if ((splitName[j] == 'b') && (splitName[1 + j] == 'ss')) {
+            var RSID = splitName[2 + j];
+            break;
+            }
+            }
+            }
+            }
+            if (rsidCollection[fetchrsidSpace][fetchrsidBrand] == RSID) {
+            console.log('[PASS] Loading correct RSID');
+            } else {
+            console.log('[FAIL] Expected RSID should be', rsidCollection[fetchrsidSpace][fetchrsidBrand]);
+            }
+            }
+            }
+            }
+            }
+            }
+            
+            var entries = [];
+            var countCalls = 0;
+            var countpageEvents = 0;
+            for (var i = 0; i < window.performance.getEntries().length; i++) {
+            var a = window.performance.getEntries()[i];
+            if (typeof a.name === 'string' && (a.name.indexOf('sc.omtrdc.net') > 0 || a.name.indexOf('sanalytics') > 0)) {
+            countCalls = 1 + countCalls;
+            entries.push(a.name);
+            var splitName = a.name.split("&");
+            for (var j = 0; j < splitName.length; j++) {
+            if (splitName[j] == 'pageviewevent=1') {
+            countpageEvents = 1 + countpageEvents;
+            break;
+            }
+            }
+            }
+            }
+            if (countpageEvents == 1)
+            console.log('[PASS] Single PageView call');
+            else if (countpageEvents > 1)
+            console.log('[FAIL] Multiple PageView calls are firing');
+            else {
+            console.log('[FAIL] No pageview call firing');
+            }
+            var exitFlag = 0;
+            var exitLinkFlag = 0;
+            if (typeof window.s_c_il !== 'undefined') {
+            for (var j = 0; j < s_c_il.length; j++) {
+            if (s_c_il[j].version == '2.3.0') {
+            exitFlag = 1;
+            var url = window.location.host;
+            var splitUrl = url.split(".");
+            var expectedInternal = s_c_il[1].linkInternalFilters;
+            var previousUrl = document.referrer;
+            if (typeof previousUrl == "undefined" || previousUrl == "") {
+            if (expectedInternal.includes(splitUrl[1])) {
+            if (splitUrl[0] && splitUrl[0].trim() !== "www") {
+            console.log("[FAIL] s.linkInternalFilters does not contain this domain and will fire exit calls");
+            } else {
+            exitLinkFlag = 1;
+            }
+            }
+            } else {
+            var splitpreviousUrl = previousUrl.split("/");
+            var getpreviousUrl = splitpreviousUrl[2].split(".");
+            if (expectedInternal.includes(splitUrl[1])) {
+            if (splitUrl[0] !== getpreviousUrl[0]) {
+            console.log("[FAIL] s.linkInternalFilters does not contain this domain and will fire exit calls");
+            } else {
+            console.log("[PASS] Correct s.linkInternalFilters");
+            }
+            }
+            }
+            }
+            }
+            if (exitLinkFlag == 1) {
+            console.log("[PASS] Correct s.linkInternalFilters");
+            }
+            if (exitFlag == 0) {
+            console.log("[FAIL] Version of s_c_il is not valid");
+            }
+            } else {
+            console.log('[FAIL] No Adobe Analytics instance');
+            }
+            }());
+         </p>
+      </div>
+  <!-- Custom scripts for this template -->  
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+     (function() {
+       var data = [
+	   {
+         text: 'Choose a brand name',
+         children: ['Select domain']
+           
+         },
+	   {
+         text: 'Cartoon Network',
+         value: 'cartoonnetwork',
+         children: [ 'www.cartoonnetwork.com', 'www.cartoonnetwork.com.ve','www.cartoonnetworkhq.net','www.cartoonnetwork.cz','www.cartoonnetwork.cl','www.cartoonnetworkhq.net','www.cartoonnetwork.com.co', 'www.cartoonnetwork.cl', 'www.cartoonnetworkarabic.com', 'www.cartoonnetworkme.com', 'www.cartoonnetwork.com.tr', 'www.cartoonnetwork.it', 'www.cartoonnetwork.es', 'www.cartoonnetwork.pt', 'www.cartoonnetwork.pl', 'www.cartoonnetwork.ro', 'www.cartoonnetwork.ru', 'www.cartoonnetwork.bg', 'www.cartoonnetwork.hu', 'www.cartoonnetwork.nl', 'www.cartoonnetwork.fr', 'www.cartoonnetwork.de', 'www.cartoonnetwork.se', 'www.cartoonnetwork.dk', 'www.cartoonnetwork.no', 'www.cartoonnetwork.jp', 'www.cartoonnetwork.kr']
+           
+         }, {
+         text: 'CNN',
+		 value: 'cnn',
+         children: ['www.cnnchile.com']
+       },{
+         text: 'TNT',
+		 value: 'tntdrama',
+         children: ['www.tntdrama.com']
+       },{
+         text: 'TBS',
+		 value: 'tbs',
+         children: ['www.tbs.com']
+       }];
+
+       $('#brand_input').cascadingSelect({
+         subSelects: ['#domain_input'],
+         data: data
+       });
+     })();
+</script>
+  <!-- End of custom script -->
+</body>
+</html>
